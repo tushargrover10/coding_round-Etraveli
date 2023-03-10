@@ -79,5 +79,15 @@ class LinkedList:
         for i in range(0, length - n):
             temp = temp.next
         print(temp.data)
+        
+        
+        
+####################################################3
+
+
+def countWays(N):
+  ans = (N - 1) * (N - 2) / 2
+         
+  print(ans)
 
 
