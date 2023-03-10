@@ -1,0 +1,83 @@
+Write a  Program to check whether the given array is Mirror Inverse or not.
+
+def reverse(arr):
+  if arr[::-1] == arr:
+    print("array is mirror inverse")
+  else:
+    print("array is not mirror inverse")
+    
+x = [3,2,1,4,5,3]
+y = [ 'n' , 'i' , 't','i' , 'n']
+
+reverse(y) ---> array is mirror inverse
+reverse(x)----> array is not mirror inverse
+
+
+
+
+###################################################################
+
+Write a Java Program to find the Transpose of a given Matrix
+
+##################################################################
+
+X= [[12,7],
+    [4 ,5],
+    [3 ,8]]
+
+result = [[0,0,0],
+         [0,0,0]]
+
+
+for i in range(len(X)):
+  
+   for j in range(len(X[0])):
+       result[j][i] = X[i][j]
+
+for r in result:
+   print(r)
+   
+ OUTPUT->    [12, 4, 3]
+             [7, 5, 8]
+             
+#######################################################################
+
+Given a linked list consisting of L nodes and given a number N. The task is to find the
+Nth node from the end of the linked list.
+###########################################################################
+
+class Node:
+    def __init__(self, new_data):
+        self.data = new_data
+        self.next = None
+  
+  
+class LinkedList:
+    def __init__(self):
+        self.head = None
+  
+   
+    def push(self, new_data):
+        new_node = Node(new_data)
+        new_node.next = self.head
+        self.head = new_node
+  
+    
+    def printNFromLast(self, n):
+        temp = self.head  
+  
+        length = 0
+        while temp is not None:
+            temp = temp.next
+            length += 1
+  
+       
+        if n > length:  # If entered location is greater than length of linked list
+            print('Location is greater than the' + ' length of LinkedList')
+            return
+        temp = self.head
+        for i in range(0, length - n):
+            temp = temp.next
+        print(temp.data)
+
+
